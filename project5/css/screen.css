@@ -1,9 +1,24 @@
+/* css for project 5*/
 /* dark green is 006B38, light green is 79C000 */
+
+body {
+    font-family: sans-serif;
+    line-height: 150%;
+    padding: 5%;
+}
 h1 {
     color: #006b38;
+    letter-spacing: .5px;
+}
+img {
+    max-width: 100%;
 }
 p {
-    color: gray;
+    color: rgb(60,60,60);
+    letter-spacing: .25px;
+}
+b {
+    color: #79C000;
 }
 h2, h3 {
     color: #79C200;
