@@ -1,0 +1,10 @@
+/* dark green is 006B38, light green is 79C000 */
+h1 {
+    color: #006b38;
+}
+p {
+    color: gray;
+}
+h2, h3 {
+    color: #79C200;
+}
