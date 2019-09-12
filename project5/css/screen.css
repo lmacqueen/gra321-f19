@@ -2,8 +2,10 @@
 /* dark green is 006B38, light green is 79C000 */
 
 body {
-    font-family: sans-serif;
-    line-height: 150%;
+    font-family: mr-eaves-modern, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 120%;
     padding: 5%;
 }
 h1 {
@@ -15,11 +17,30 @@ img {
 }
 p {
     color: rgb(60,60,60);
-    letter-spacing: .25px;
+    letter-spacing: .1px;
 }
 b {
     color: #79C000;
+    font-family: mr-eaves-modern, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+i {
+    font-family: mr-eaves-modern, sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 h2, h3 {
     color: #79C200;
+    letter-spacing: .5px;
+}
+h3 {
+    margin-top: 3rem;
+}
+a {
+    color: #79C200;
+    text-decoration: none;
+}
+a:active {
+    color: #006b38;
 }
