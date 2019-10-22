@@ -36,7 +36,7 @@ p {
     font-family: benton-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18pt;
+    font-size: 1rem;
     margin: 12px;
     }
 
@@ -44,7 +44,7 @@ a {
     font-family: benton-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18pt; 
+    font-size: 1rem; 
     text-decoration: none;
     padding: 21px;
     }
@@ -60,7 +60,7 @@ a {
     font-family: benton-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18pt; 
+    font-size: 1rem; 
     text-decoration: none;
     padding: 21px;
     margin: 12px;
