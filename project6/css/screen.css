@@ -8,8 +8,8 @@ img {
     }
 body {
     background-color: rgba(78, 89, 76, 100);
-    margin: 0px;
     padding: 0px;
+    margin:0px;
     
     }
 
@@ -67,8 +67,9 @@ a {
 }
 
 .hours {
-    margin-bottom:42pt;
+    margin: 12pt 42px 42pt 42pt;
 }
+
 .hours p {
     line-height:26pt;
     margin:0px 12px 0px 12px;
