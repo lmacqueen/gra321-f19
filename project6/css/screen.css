@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 img {
-    max-width: 102%;
+    max-width: 100%;
     }
 body {
     background-color: rgba(78, 89, 76, 100);
+    margin: 0px;
+    padding: 0px;
+    
     }
 
 h1 {
@@ -16,6 +19,7 @@ h1 {
     font-weight: 700;
     font-style: normal;
     font-size: 36pt; 
+    margin: 12px;
     }
 
 h2 {
@@ -24,6 +28,7 @@ h2 {
     font-weight: 700;
     font-style: normal;
     font-size: 18pt; 
+    margin: 12px;
     }
 
 p {
@@ -32,6 +37,7 @@ p {
     font-weight: 400;
     font-style: normal;
     font-size: 18pt;
+    margin: 12px;
     }
 
 a {
@@ -43,6 +49,10 @@ a {
     padding: 21px;
     }
 
+.about {
+    display:none;
+}
+
 .totop a {
     border: 2px solid white;
     border-radius: 10px;
@@ -53,14 +63,34 @@ a {
     font-size: 18pt; 
     text-decoration: none;
     padding: 21px;
+    margin: 12px;
     }
 
 .nav {
-    padding:12px;  
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 12px;
+    border: 2px solid white;
+    border-left: none;
+    border-top-right-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+    margin: 12px 12px 12px 0px;
+    max-width: 95px;
+    min-width:10%;
+}
+
+.menu {
+    padding-left: 107px;
+    
+    }
+
+.prices {
     
 }
 
 .nav img {
     max-width: 5%;
-    min-width: 50px;}
+    min-width: 60px;
+    padding: 6px 2px 6px 2px;
+    }
 
