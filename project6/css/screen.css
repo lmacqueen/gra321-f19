@@ -102,6 +102,10 @@ a {
     margin-top:-558px;
     }
 
+.price {
+    margin-right: 42px;
+    min-width:92px}
+
 .totop a {
     border: 2px solid white;
     border-bottom:none;
