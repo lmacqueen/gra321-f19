@@ -10,7 +10,6 @@ body {
     background-color: rgba(78, 89, 76, 100);
     padding: 0px;
     margin:0px;
-    
     }
 
 h1 {
@@ -39,7 +38,7 @@ h2 {
     font-family: benton-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 18pt; 
+    font-size: 20pt; 
     margin: 12px;
     }
 
@@ -49,7 +48,7 @@ p {
     font-weight: 400;
     font-style: normal;
     font-size: 18pt;
-    line-height:21pt;
+    line-height:26pt;
     margin: 12px;
     }
 
@@ -80,6 +79,10 @@ a {
     margin-bottom: 12px;
 }
 
+.hours h2 {
+    margin-top: 42px;
+}
+
 .nav {
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -102,9 +105,29 @@ a {
     margin-top:-558px;
     }
 
+.iced h2{
+    margin-top: 84px;
+}
+
+.specials h2 {margin-top: 84px;}
+
+.other h2 {margin-top: 84px;}
+
+.food h2 {margin-top: 84px;}
+
+.paninis h2 {margin-top: 84px;}
+
+.item {
+    margin-top:42px;
+}
+
 .price {
-    margin-right: 42px;
-    min-width:92px}
+    margin-left:15rem;
+    min-width:100px}
+.price p{margin:10px;}
+.hot {
+    display: flex;
+}
 
 .totop a {
     border: 2px solid white;
@@ -120,3 +143,10 @@ a {
     align-content:center;
     margin: 12px;
     }
+
+.foot {
+    margin: 84pt 42px 0pt 42pt;
+}
+.totop {
+    margin-top:42px;
+}
