@@ -124,7 +124,8 @@ a {
 .price {
     margin-left:15rem;
     min-width:100px}
-.price p{margin:10px;}
+.price p{margin:6px;}
+.add p {margin:6px;}
 .hot {
     display: flex;
 }
