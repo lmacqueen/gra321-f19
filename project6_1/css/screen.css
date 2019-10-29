@@ -1,0 +1,161 @@
+/* css for project 6*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    }
+body {
+    background-color: rgba(78, 89, 76, 100);
+    padding: 0px;
+    margin:0px;
+    }
+
+h1 {
+    color: white;
+    letter-spacing:.75px;
+    font-family: benton-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36pt; 
+    margin: 12px;
+    }
+
+li {
+    color: white;
+    letter-spacing:.75px;
+    font-family: benton-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36pt; 
+    margin: 12px;
+    }
+
+h2 {
+    color: white;
+    letter-spacing:.5px;
+    font-family: benton-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20pt; 
+    margin: 12px;
+    }
+
+p {
+    color: white;
+    font-family: benton-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18pt;
+    line-height:26pt;
+    margin: 12px;
+    }
+
+a {
+    font-family: benton-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18pt; 
+    text-decoration: none;
+    padding: 21px;
+    }
+
+.about {
+    display:none;
+}
+
+.hours {
+    margin: 12pt 42px 42pt 42pt;
+}
+
+.hours p {
+    line-height:26pt;
+    margin:0px 12px 0px 12px;
+}
+
+.hours img {
+    margin-top:12px;
+    margin-bottom: 12px;
+}
+
+.hours h2 {
+    margin-top: 42px;
+}
+
+.nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 12px;
+    border: 2px solid white;
+    border-left: none;
+    border-top-right-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+    margin: 168px 12px 12px 0px;
+    max-width: 95px;
+}
+
+.nav img {
+    width: 60px;
+    padding: 6px 2px 6px 2px;
+    }
+
+.menu {
+    padding-left: 107px;
+    margin-top:-558px;
+    }
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "product product"
+    ". price"
+    "add add";
+  grid-template-columns: 3fr 1fr;
+  padding: 1rem;
+  width: 100%;
+}
+
+.item {
+    grid-area: "product";
+}
+
+.price {grid-area: "price";}
+
+.add {grid-area: "add";}
+
+.iced h2{
+    margin-top: 84px;
+}
+
+.specials h2 {margin-top: 84px;}
+
+.other h2 {margin-top: 84px;}
+
+.food h2 {margin-top: 84px;}
+
+.paninis h2 {margin-top: 84px;}
+
+
+.totop a {
+    border: 2px solid white;
+    border-bottom:none;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    font-family: benton-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18pt; 
+    text-decoration: none;
+    padding: 21px;
+    align-content:center;
+    margin: 12px;
+    }
+
+.foot {
+    margin: 84pt 42px 0pt 42pt;
+}
+.totop {
+    margin-top:42px;
+}
