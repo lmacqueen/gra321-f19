@@ -48,8 +48,8 @@ p {
     font-family: benton-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 17pt;
-    line-height:26pt;
+    font-size: 16pt;
+    line-height:20pt;
     margin: 12px;
     }
 
@@ -57,7 +57,7 @@ a {
     font-family: benton-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18pt; 
+    font-size: 16pt; 
     text-decoration: none;
     padding: 21px;
     }
@@ -136,8 +136,8 @@ a {
 .price p {white-space:nowrap;}
 
 .add {
-    grid-area: "add";
-    margin-bottom: 21px;}
+    margin: 42px 0px 21px 0px;
+    }
 
 .addb p{
     padding: 0rem 0rem 0rem .5rem;
@@ -156,6 +156,7 @@ a {
 
 .paninis h2 {margin-top: 84px;}
 
+.paninis .item {margin-top: 42px;}
 
 .totop a {
     border: 2px solid white;
@@ -200,7 +201,7 @@ a {
     .hours {
         position:relative;
         width:100%;
-        margin: 12px 0px 42px 82px;
+        margin: 12px 0px 42px 42px;
         padding-top:21px;
     }
     
@@ -211,8 +212,9 @@ a {
     }
     
     .hours img {
-        max-width:71.7%;
-        margin: -550px 0px 12px 270px;
+        max-width:60%;
+        margin: -550px 42px 12px 270px;
+        max-height: 500px;
     }
     
     .hoursb {
@@ -221,17 +223,55 @@ a {
     }
     
     .menu {
-    margin: 42px 42px 42px 6.56%;
+    margin: 84px 42px 42px 42px;
     padding-left:0px;
     }
     
     .gridb {
-        display: grid;grid-gap: 1rem;
+        display: grid;
+        grid-gap: 1rem;
         grid-template-areas: 
         "left ."
         ". right";
-      grid-template-rows: 1fr 1fr;
-        gri
+      grid-template-columns: 1fr 1fr;
+        margin-bottom:0px;
+    }
+    
+    .iced {margin-top: -75px;}
+    
+    .specials .grid {
+        max-width: 48%;
+        margin-right: 21px;
+    }
+    .specials img {
+        max-width:48%;
+        margin: -650px 42px 12px 50%;
+        max-height: 500px;
     }
     
     
+    
+}
+    
+/*@media (min-width: 1500px) {
+    .gridc {
+        display: grid;
+        grid-gap:1rem;
+        grid-template-areas:
+            "hot ."
+            ". iced";
+        grid-template-rows: 1fr 1fr;
+    }
+        
+    .specials {margin-top: -20000 px;}    
+     
+    
+    .gride {
+        display: grid;
+        grid-gap:1rem;
+        grid-template-areas:
+            "other ."
+            ". food";
+        grid-template-rows: 1fr 1fr;
+    }
+}*/
