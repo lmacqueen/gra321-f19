@@ -62,12 +62,9 @@ a {
     padding: 21px;
     }
 
-.about {
-    display:none;
-}
-
 .desktop {display:none;}
 .menub{display:none;}
+.hoursb {display:none;}
 
 .hours {
     margin: 12px 42px 42px 42px;
@@ -117,7 +114,7 @@ a {
     "product ."
     ". price"
     "add";
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   padding: 1rem 1rem 0rem .5rem;
     max-width: 90%;
 }
@@ -136,13 +133,15 @@ a {
 .price p {white-space:nowrap;}
 
 .add {
-    margin: 42px 0px 21px 0px;
+    margin: 42px 0px 21px 10px;
     }
 
 .addb p{
-    padding: 0rem 0rem 0rem .5rem;
+    padding: 0rem 0rem 0rem 10px;
     white-space:nowrap;
 }
+
+.iced {padding: 42px 0px 42px 0px;}
 
 .iced h2{
     margin-top: 84px;
@@ -174,7 +173,9 @@ a {
     }
 
 .foot {
-    margin: 82px 0rem 0rem 0rem;
+    margin-top: 82px;
+    margin-left: auto;
+    margin-right:auto;
     text-align: left;
     max-width:72%;
     align-content:center;
@@ -190,40 +191,45 @@ a {
 
 
 
-@media (min-width: 600px) {
-    p {}
-    
+@media (min-width: 600px) {    
     .desktop {display:block;}
     .mobile {display:none;}
     .menub{display:block;}
     .nav {display:none;}
     
+    .gridg {
+        display:grid;
+        grid-gap:1rem;
+        grid-template-areas: 
+            "text ."
+            ". map";
+        grid-template-columns: 1fr 3fr;
+    }
+    
     .hours {
         position:relative;
         width:100%;
-        margin: 12px 0px 42px 42px;
-        padding-top:21px;
+        margin: 12px 0px 0px 42px;
+        padding:21px 0px 42px 0px;
+    }
+    
+    .hours h2, .hours p {
+        grid-area: "text";
     }
     
     .map {
-        padding:0px;
-        position: absolute;
-        right:0px;
-    }
-    
-    .hours img {
-        max-width:60%;
-        margin: -550px 42px 12px 270px;
-        max-height: 500px;
+        grid-area: "map";
+        max-width:100%;
     }
     
     .hoursb {
+        display:contents;
         padding-top: 12px;
         margin: 0px 0px 0px 0px;
     }
     
     .menu {
-    margin: 84px 42px 42px 42px;
+    margin: 42px 42px 42px 42px;
     padding-left:0px;
     }
     
@@ -237,15 +243,25 @@ a {
         margin-bottom:0px;
     }
     
+    .gridf {
+        display: grid;
+        grid-gap:1rem;
+        grid-template-areas: 
+            "text ."
+            ". image";
+        grid-template-columns: 1fr 1fr;
+    }
+    
     .iced {margin-top: -75px;}
     
     .specials .grid {
+        grid-area:"text"
         max-width: 48%;
         margin-right: 21px;
     }
     .specials img {
-        max-width:48%;
-        margin: -650px 42px 12px 50%;
+        grid-area: "image";
+        max-width:100%;
         max-height: 500px;
     }
     
