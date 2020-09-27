@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unattracted Clock</title>
+        <!--webfont link tab-->
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="clock">
+            
+            <div id="background"><img src="img/bg.png"></div>
+            
+            <div class="hands">
+                <div id="hours"><img src="img/hours.png"></div>
+                <div id="minutes"><img src="img/minutes.png" onclick="rotest()"></div>
+                <div id="seconds"><img src="img/seconds.png"></div>
+                <div id="blur"><img src="img/blur.png"></div>
+            </div>
+
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <style>    
+            
+            #clock {
+                position: absolute;
+                top: 2%;
+                width: 75%;
+                margin-left: 12.5%;
+                margin-right: 12.5%;
+            }
+            
+            #hours {
+                position: absolute;
+                top: 11.1%;
+                left: 17.55%;
+                width: 77.8%;
+            }
+            
+            #minutes {
+                position: absolute;
+                top: 11.1%;
+                left: 17.55%;
+                width: 77.8%;
+            }
+            
+            #seconds {
+                position: absolute;
+                top: 11.1%;
+                left: 17.55%;
+                width: 77.8%;
+            }
+            
+            #blur {
+                position: absolute;
+                top: 11.1%;
+                left: 17.55%;
+                width: 77.8%;
+            }
+        
+            
+            body {
+                background-color: black;
+            }
+            
+            
+        </style>    
+        
+        <script>
+        /*
+            https://enlight.ml/clock 
+            element.style.transform = 'rotate(90deg)'
+        */
+            
+        function rotest() {
+            blur.style.transform = 'rotate(10deg)';
+            
+        }    
+            
+        function rotateme () {
+            with(new Date()) {
+                h = 30 * (getHours () %12 + getMinutes () / 60);
+                m = 6 * getMinutes ();
+                s = 6 * getSeconds ();
+                
+            document.getElementById('seconds').style.transform = rotate(" + s + "deg);
+                
+            }
+          
+        s = 6 * getSeconds ();
+            
+        function secondhand () {
+            with(new Date()) {
+                document.getElementById('seconds');
+                element.style.transform = 'rotate(90deg)';
+            }
+            
+        }   
+            
+            
+        }    
+        function moveHands () {
+         with(new Date()) {
+          h = 30 * (getHours () %12 + getMinutes () / 60);
+          m = 6 * getMinutes ();
+          s = 6 * getSeconds ();
+
+        document.getElementById('seconds').style.cssText = -webkit-transform:rotate(" + s + "deg);";
+
+        document.getElementById('minutes').style.cssText = "-webkit-transform:rotate(" + m + "deg);";
+
+        document.getElementById('hours').style.cssText = "-webkit-transform:rotate(" + h + "deg);";
+        
+        }
+        }     
+             
+        </script>
+        
+    </body>
+</html>
