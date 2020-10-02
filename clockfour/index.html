@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unattracted Clock</title>
+        <!--webfont link tab-->
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="clock">
+            
+            <div id="background"><img src="img/bg.png"></div>
+            
+            <div class="hands">
+                
+                <div id="rings"><img src="img/rings.png"></div>
+                <div id="hours"><img src="img/hoursdot.png"></div>
+                <div id="minutes"><img src="img/minutesdot.png" onclick="rotest()"></div>
+                <div id="seconds"><img src="img/secondsdot.png"></div>
+                <div id="blur"><img src="img/blurb.png"></div>
+            </div>
+
+            <div id="rule"></div>
+            <h1>resources</h1>
+            <p>link placeholder etc</p>
+        </div> 
+        
+        
+        
+        
+        
+        
+        <style>    
+            
+            #clock {
+                position: absolute;
+                top: 1%;
+                margin-left: 10%;
+                margin-right: 12%;
+            }
+            
+            #hours {
+              position: absolute;
+                top: .4%;
+                left: 18.65%;
+                width: 77.8%;
+  
+            }
+            
+            #rings {
+               position: absolute;
+                top: .4%;
+                left: 18.6%;
+                width: 77.8%;  
+            }
+            
+            #minutes {
+                position: absolute;
+                top: .4%;
+                left: 18.65%;
+                width: 77.8%;
+
+            }
+            
+            #seconds {
+                position: absolute;
+                top: .4%;
+                left: 18.65%;
+                width: 77.8%;
+
+            }
+            
+            #front {
+                position: absolute;
+                top: .4%;
+                left: 18.6%;
+                width: 77.8%;
+
+            }
+            
+            #blur {
+                position: absolute;
+                top: .4%;
+                left: 18.6%;
+                width: 77.8%;
+                opacity: 96%;
+            } 
+         
+            
+            body {
+                background-color: black;
+            }
+            
+            #rule {
+                margin-top: 40px;
+                padding: 1.5px;
+                background:grey;
+                border-radius: 2px;
+            }
+            
+            h1 {
+                color:white;
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+            
+            p {
+                color: white;
+                font-family: sans-serif;
+                font-size: 15px;
+            }
+            
+            
+        </style>    
+        
+        
+        
+        
+        
+        
+        <script>
+        /*
+            https://enlight.ml/clock 
+            element.style.transform = 'rotate(90deg)'
+              var mdegree = m * 6;
+           var hdegree = h * 30 + mdegree/12;
+        */             
+            
+            var second_hand =           document.getElementById('seconds');
+            var minute_hand = document.getElementById('minutes');
+            var hour_hand = document.getElementById('hours');
+            var ive_hand = document.getElementById('blur');
+           
+            /*
+           var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.rotate(20 * Math.PI / 180);
+            ctx.fillRect(50, 20, 100, 50);
+            //                var c = document.getElementById("seconds");
+//                var ctx = c.getContext("2d");
+//                ctx.rotate(20 * Math.PI / 180);
+//                ctx.fillRect(50, 20, 100, 50);
+                var mdegree = 6 * m;
+           }
+           //                var sd = second_hand.getContext("2d");
+//                second_hand.rotate(sdegree);
+           */
+          
+            function time() {
+                
+                var d = new Date();
+                var s = d.getSeconds();
+                var h = d.getHours();
+                var m = d.getMinutes();
+                var mdegree = 6 * m;
+                var hdegree = 30 * h + mdegree / 12;
+                var sdegree = 10 * s;
+                second_hand.style.transform = 'rotate('+sdegree+'deg)';
+                minute_hand.style.transform = 'rotate('+mdegree+'deg)';
+                hour_hand.style.transform = 'rotate('+hdegree+'deg)';
+                ive_hand.style.transform = 'rotate('+sdegree+'deg)';
+                
+                setTimeout(time, 1000);      
+            }
+
+
+        
+            window.onload = time();
+            
+        </script>
+        
+    </body>
+</html>
