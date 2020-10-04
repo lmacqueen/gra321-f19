@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Un/attracted</title>
+        <link rel="stylesheet" href="https://use.typekit.net/eyj1bce.css">
+<!--
+
+        Paralucent Extra Light Italic
+        font-family: paralucent, sans-serif;
+        font-weight: 200;
+        font-style: italic;
+
+        Paralucent Light Italic
+        font-family: paralucent, sans-serif;
+        font-weight: 300;
+        font-style: italic;
+
+        Paralucent Medium Italic
+        font-family: paralucent, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+
+        Paralucent Light
+        font-family: paralucent, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+
+        Paralucent Medium
+        font-family: paralucent, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+ <img onmouseover="bigImg(this)" src="smiley.gif" alt="Smiley"> 
+-->
+
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+
+        <div id="clock">
+            
+            <div class="hands">
+                <div id="rings"><img src="img/ringsb.png"></div>
+                <div id="hours"><img src="img/hoursdot.png"></div>
+                <div id="minutes"><img src="img/minutesdot.png" onclick="rotest()"></div>
+                <div id="seconds"><img src="img/secondsdot.png"></div>
+                <div id="front"><img src="img/front.png"></div>
+                <div id="blur"><img src="img/blurc.png"></div>
+            </div>
+
+        </div> 
+        
+        
+        <div id="info">
+            
+            <span id="hover"></span>
+            <p class="left" id="explanation">1% of the population identify as asexual or aspec, meaning they experience little to no sexual attraction. The few media representations of asexuality are mired in problematic tropes.</p>
+            
+            <div id="tropes">
+                <img src="img/alien.png" id="alien" class="a">
+                <img src="img/fixable.png" id="fixable" class="a">
+                <img src="img/pathological.png" id="pathological" class="b">
+                <img src="img/traumatized.png" id="traumatized" class="b">
+                <img src="img/immature.png" id="immature" class="b">
+                <img src="img/repulsive.png" id="repulsive" class="c">
+                <img src="img/prude.png" id="prude" class="c">
+            </div>
+            
+            
+            <div id="trope_explanation">
+                <h2>Alien</h2>
+                <p>Representing asexuality as alien or otherwise inhuman otherizes and marginalizes asexuals</p>
+                
+                <h2>Pathological</h2>
+                <p>Associating asexuality with serial killers and psychopaths makes the identity seem like a sickness.</p>
+                
+                <h2>Repulsive</h2>
+                <p>Coding “undesirable” groups with asexuality furthers the misconceptions that asexuals identify that way because they can’t get a date.</p>
+                
+                <h2>Fixable</h2>
+                <p>Portraying  asexuality being “fixed” by falling in love conveys the idea that asexuals don’t understand themselves.</p>
+                
+                <h2>Traumatized</h2>
+                <p>Showing asexuality being formed as a result of trauma portrays the identity as a mental illness.</p>
+                
+                <h2>Prude</h2>
+                <p>Conflating asexuality (an identity) with celibacy (a choice) sets problematic expectations about sex in asexual relationships.</p>
+                
+                <h2>Immature</h2>
+                <p>Showing asexuality as a phase that people grow out of  invalidates people who have identified as asexual for their entire lives.</p>
+            </div>
+            
+        </div>
+        
+        
+        <div id="disclaimer"><p>This clock is meant to be explored on a larger screen. It will still work at this small size, but less of the information will be available.</p></div>
+        
+        
+        
+        <style>  
+            
+/*hands styling*/
+            
+            #hours {
+              position: absolute;
+              top: 18px;
+              width: 62.24%;
+              left: 18.88%;
+            }
+            
+            #rings {
+               position: absolute;
+                top: 18px;
+                width: 62.24%;
+              left: 18.88%;
+            }
+        
+            
+            #minutes {
+                position: absolute;
+                top: 18px;
+                width: 62.24%;
+              left: 18.88%;
+            }
+            
+            #seconds {
+                position: absolute;
+                top: 18px;
+                width: 62.24%;
+              left: 18.88%;
+            }
+            
+            #front {
+                position: absolute;
+                top: 18px;
+                width: 62.24%;
+              left: 19.88%;
+            }
+            
+            #blur {
+                position: absolute;
+                top: 18px;
+                width: 65.6%;
+                left: 17.2%;
+                margin-top: -1.5%;
+                
+                opacity: 96%;
+            } 
+         
+            #hover {
+                position: absolute;
+                width: 55.5%;
+                left: 22.25%;
+                top: 18px;
+                margin-top: 3.5%;
+                border-radius: 50%;
+                background-color: white;
+                opacity: 0%;
+            }
+            
+            #hover:before {
+                content:"";
+                display: block;
+                padding-top: 100%;
+            }
+            
+            body {
+                background-color: black;
+            }
+            
+           
+            
+/*interaction styling*/            
+            
+            
+            h1 {
+                color:white;
+                font-family: sans-serif;
+                font-size: 20px;
+                
+            }            
+            
+            p {
+                color: white;
+                font-family: paralucent, sans-serif;
+                font-weight: 100;
+                
+            }
+            
+            p.left {
+                width: 23%;
+                font-size: .9rem;
+                position: absolute;
+                top: 18px;
+                margin-top: 31%;
+                left: 32%;
+            }
+            
+            #info {
+                opacity: 0%;
+                transition: 1s;
+            }
+            
+            #info:hover {
+                opacity: 100%;
+            }
+                     
+            #hover {
+                position: absolute;
+                width: 55.5%;
+                left: 22.25%;
+                top: 18px;
+                margin-top: 3.5%;
+                border-radius: 50%;
+                background-color: white;
+                opacity: 0%;
+            }
+            
+            #hover:before {
+                content:"";
+                display: block;
+                padding-top: 100%;
+            }
+            
+            #tropeinfo {
+                opacity: 0%;
+            }
+            
+            #tropes {
+                position: absolute;
+                display: grid;
+                grid-gap: 0rem;
+                grid-template-areas: 
+                    "a1 a2 a3"
+                    "b1 b2 b3"
+                    ". c .";
+                grid-template-rows: 1fr 1fr 1fr;
+                align-content: center;
+                
+                width: 32%;
+                left: 35%;
+                top: 18px;
+                margin-top: 42.5%;
+            }
+                
+                
+/*trope talk styling*/                                 
+                
+            
+            #alien {
+                grid-area: a1;
+            }
+            
+            #pathological {
+                grid-area: a2;
+            }
+            
+            #repulsive {
+                grid-area: a3;
+            }
+            
+            #fixable {
+                grid-area: b1;
+            }
+            
+            #traumatized {
+                grid-area: b2;
+            }
+            
+            #prude {
+                grid-area: b3;
+            }
+            
+            #immature {
+                grid-area: c;
+            }
+        
+            #tropes img {
+                margin-top: .8%;
+            }
+            
+            
+            h2 {
+                color: white;
+                font-family: paralucent, sans-serif;
+                font-weight: 300;
+                font-size: 1.2rem;
+                
+                position: absolute;
+                top: 18px;
+                margin-top: 28.5%;
+                left: 32%;
+            }
+            
+            #trope_explanation p {
+                font-size: .9rem;
+                
+                width: 23%;
+                position: absolute;
+                top: 18px;
+                margin-top: 31%;
+                left: 32%;
+                
+            }
+            
+            #disclaimer {
+                display: none;
+            }
+            
+            
+/*MEDIA QUERIES START HERE
+            Tablet: only paragraph on ring mouseover
+            Mobile: desktop disclaimer, no information.
+            */
+            
+/*
+            @media screen and (max-width: 680px) {
+                #tropes {display: none;}
+                
+                #trope_explanation {display:none;}
+                
+                #disclaimer {
+                    display: contents;                    
+                }
+                
+                #disclaimer p {
+                   position: absolute;
+                    top: 40px;
+                    left: 10%;
+                    margin-top: 30%;
+                    max-width: 60%; 
+                }
+            }
+*/
+            
+            
+            @media screen and (max-width : 1024px) {
+                #tropes {
+                    display: none;
+            }
+                #trope_explanation {
+                    display: none;
+                }
+                
+                #info p {
+                    font-size: .8rem;
+                }
+            }
+            
+            @media screen and (max-width: 680px) {
+                #tropes {display: none;}
+                
+                #trope_explanation {display:none;}
+                            
+                #info {display:none;}
+                
+                #disclaimer {
+                    display: contents;                    
+                }
+                
+                #disclaimer p {
+                   position: absolute;
+                    top: 40px;
+                    left: 23%;
+                    margin-top: 60%;
+                    max-width: 58%; 
+                }
+            }
+
+            
+        </style>    
+        
+        
+        
+        
+        
+        
+        <script>
+        /*
+            https://enlight.ml/clock 
+            element.style.transform = 'rotate(90deg)'
+              var mdegree = m * 6;
+           var hdegree = h * 30 + mdegree/12;
+        */             
+            
+            var second_hand =           document.getElementById('seconds');
+            var minute_hand = document.getElementById('minutes');
+            var hour_hand = document.getElementById('hours');
+            var ive_hand = document.getElementById('blur');
+           
+            /*
+           var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.rotate(20 * Math.PI / 180);
+            ctx.fillRect(50, 20, 100, 50);
+            //                var c = document.getElementById("seconds");
+//                var ctx = c.getContext("2d");
+//                ctx.rotate(20 * Math.PI / 180);
+//                ctx.fillRect(50, 20, 100, 50);
+                var mdegree = 6 * m;
+           }
+           //                var sd = second_hand.getContext("2d");
+//                second_hand.rotate(sdegree);
+           */
+          
+            function time() {
+                
+                var d = new Date();
+                var s = d.getSeconds();
+                var h = d.getHours();
+                var m = d.getMinutes();
+                var mdegree = 6 * m;
+                var hdegree = 30 * h + mdegree / 12;
+                var sdegree = 6 * s;
+                second_hand.style.transform = 'rotate('+sdegree+'deg)';
+                minute_hand.style.transform = 'rotate('+mdegree+'deg)';
+                hour_hand.style.transform = 'rotate('+hdegree+'deg)';
+                ive_hand.style.transform = 'rotate('+sdegree * (-1)+'deg)';
+                
+                setTimeout(time, 1000);      
+            }
+            
+        
+            window.onload = time();
+            
+            /*onmouseover
+                unblur (css?)                hide paragraph description
+                show description div
+            */
+            
+        </script>
+        
+    </body>
+</html>
