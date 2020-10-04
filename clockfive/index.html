@@ -59,37 +59,42 @@
             <p class="left" id="explanation">1% of the population identify as asexual or aspec, meaning they experience little to no sexual attraction. The few media representations of asexuality are mired in problematic tropes.</p>
             
             <div id="tropes">
-                <img src="img/alien.png" id="alien" class="a">
-                <img src="img/fixable.png" id="fixable" class="a">
-                <img src="img/pathological.png" id="pathological" class="b">
-                <img src="img/traumatized.png" id="traumatized" class="b">
-                <img src="img/immature.png" id="immature" class="b">
-                <img src="img/repulsive.png" id="repulsive" class="c">
-                <img src="img/prude.png" id="prude" class="c">
+                <img src="img/alien.png" id="alien" onmouseover="alien_info()" onmouseout="alien_end()">
+                
+                <img src="img/fixable.png" id="fixable" onmouseover="fixable_info()" onmouseout="fixable_end()">
+                
+                <img src="img/pathological.png" id="pathological" onmouseover="pathological_info()" onmouseout="pathological_end()">
+                
+                <img src="img/traumatized.png" id="traumatized" onmouseover="traumatized_info()" onmouseout="traumatized_end()">
+                
+                <img src="img/immature.png" id="immature" onmouseover="immature_info()" onmouseout="immature_end()">
+                
+                <img src="img/repulsive.png" id="repulsive" onmouseover="repulsive_info()" onmouseout="repulsive_end()">
+                
+                <img src="img/prude.png" id="prude" onmouseover="prude_info()" onmouseout="prude_end()">
             </div>
-            
-            
+               
             <div id="trope_explanation">
-                <h2>Alien</h2>
-                <p>Representing asexuality as alien or otherwise inhuman otherizes and marginalizes asexuals</p>
+                <h2 id="alien_term">alien</h2>
+                <p id="alien_def">Representing asexuality as alien or otherwise inhuman otherizes and marginalizes asexuals</p>
                 
-                <h2>Pathological</h2>
-                <p>Associating asexuality with serial killers and psychopaths makes the identity seem like a sickness.</p>
+                <h2 id="pathological_term">pathological</h2>
+                <p id="pathological_def">Associating asexuality with serial killers and psychopaths makes the identity seem like a sickness.</p>
                 
-                <h2>Repulsive</h2>
-                <p>Coding “undesirable” groups with asexuality furthers the misconceptions that asexuals identify that way because they can’t get a date.</p>
+                <h2 id="repulsive_term">repulsive</h2>
+                <p id="repulsive_def">Coding “undesirable” groups with asexuality furthers the misconceptions that asexuals identify that way because they can’t get a date.</p>
                 
-                <h2>Fixable</h2>
-                <p>Portraying  asexuality being “fixed” by falling in love conveys the idea that asexuals don’t understand themselves.</p>
+                <h2 id="fixable_term">fixable</h2>
+                <p id="fixable_def">Portraying  asexuality being “fixed” by falling in love conveys the idea that asexuals don’t understand themselves.</p>
                 
-                <h2>Traumatized</h2>
-                <p>Showing asexuality being formed as a result of trauma portrays the identity as a mental illness.</p>
+                <h2 id="traumatized_term">traumatized</h2>
+                <p id="traumatized_def">Showing asexuality being formed as a result of trauma portrays the identity as a mental illness.</p>
                 
-                <h2>Prude</h2>
-                <p>Conflating asexuality (an identity) with celibacy (a choice) sets problematic expectations about sex in asexual relationships.</p>
+                <h2 id="prude_term">prude</h2>
+                <p id="prude_def">Conflating asexuality (an identity) with celibacy (a choice) sets problematic expectations about sex in asexual relationships.</p>
                 
-                <h2>Immature</h2>
-                <p>Showing asexuality as a phase that people grow out of  invalidates people who have identified as asexual for their entire lives.</p>
+                <h2 id="immature_term">immature</h2>
+                <p id="immature_def">Showing asexuality as a phase that people grow out of  invalidates people who have identified as asexual for their entire lives.</p>
             </div>
             
         </div>
@@ -100,6 +105,7 @@
         
         
         <style>  
+          
             
 /*hands styling*/
             
@@ -117,7 +123,6 @@
               left: 18.88%;
             }
         
-            
             #minutes {
                 position: absolute;
                 top: 18px;
@@ -248,33 +253,39 @@
                 
 /*trope talk styling*/                                 
                 
-            
             #alien {
                 grid-area: a1;
+                filter: blur(2.5px);
             }
             
             #pathological {
                 grid-area: a2;
+                filter: blur(2.5px);
             }
             
             #repulsive {
                 grid-area: a3;
+                filter: blur(2.5px);
             }
             
             #fixable {
                 grid-area: b1;
+                filter: blur(2.5px);
             }
             
             #traumatized {
                 grid-area: b2;
+                filter: blur(2.5px);
             }
             
             #prude {
                 grid-area: b3;
+                filter: blur(2.5px);
             }
             
             #immature {
                 grid-area: c;
+                filter: blur(2.5px);
             }
         
             #tropes img {
@@ -290,7 +301,7 @@
                 
                 position: absolute;
                 top: 18px;
-                margin-top: 28.5%;
+                margin-top: 29%;
                 left: 32%;
             }
             
@@ -302,8 +313,30 @@
                 top: 18px;
                 margin-top: 31%;
                 left: 32%;
-                
             }
+            
+            #alien_term{opacity: 0%;}
+            #alien_def{opacity: 0%;}
+            
+            #pathological_term{opacity: 0%;}
+            #pathological_def{opacity: 0%;}
+            
+            #repulsive_term{opacity: 0%;}
+            #repulsive_def{opacity: 0%;}
+            
+            #fixable_term{opacity: 0%;}
+            #fixable_def{opacity: 0%;}
+            
+            #traumatized_term{opacity: 0%;}
+            #traumatized_def{opacity: 0%;}
+            
+            #prude_term{opacity: 0%;}
+            #prude_def{opacity: 0%;}
+            
+            #immature_term{opacity: 0%;}
+            #immature_def{opacity: 0%;}
+            
+            
             
             #disclaimer {
                 display: none;
@@ -315,26 +348,7 @@
             Mobile: desktop disclaimer, no information.
             */
             
-/*
-            @media screen and (max-width: 680px) {
-                #tropes {display: none;}
-                
-                #trope_explanation {display:none;}
-                
-                #disclaimer {
-                    display: contents;                    
-                }
-                
-                #disclaimer p {
-                   position: absolute;
-                    top: 40px;
-                    left: 10%;
-                    margin-top: 30%;
-                    max-width: 60%; 
-                }
-            }
-*/
-            
+    
             
             @media screen and (max-width : 1024px) {
                 #tropes {
@@ -375,8 +389,6 @@
         
         
         
-        
-        
         <script>
         /*
             https://enlight.ml/clock 
@@ -384,6 +396,8 @@
               var mdegree = m * 6;
            var hdegree = h * 30 + mdegree/12;
         */             
+            
+/* Clock Events */  
             
             var second_hand =           document.getElementById('seconds');
             var minute_hand = document.getElementById('minutes');
@@ -425,10 +439,150 @@
         
             window.onload = time();
             
-            /*onmouseover
-                unblur (css?)                hide paragraph description
-                show description div
-            */
+            
+/* Interactive Elements */            
+
+            var exp = document.getElementById('explanation');
+            
+            function alien_info() {
+                var alien_term = document.getElementById('alien_term');
+                var alien_def = document.getElementById('alien_def');
+                var alien = document.getElementById('alien');
+                
+                alien.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                alien_term.style.opacity = "100%";
+                alien_def.style.opacity = "100%";
+            }
+            
+            function alien_end() {
+                alien_def.style.opacity = "0%";
+                alien_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                alien.style.filter = "blur(2.5px)";
+                
+            }
+            
+            
+            function pathological_info() {
+                var pathological_term = document.getElementById('pathological_term');
+                var pathological_def = document.getElementById('pathological_def');
+                var pathological = document.getElementById('pathological');
+                
+                pathological.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                pathological_term.style.opacity = "100%";
+                pathological_def.style.opacity = "100%";
+            }
+            
+            function pathological_end() {
+                pathological_def.style.opacity = "0%";
+                pathological_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                pathological.style.filter = "blur(2.5px)";
+                
+            }
+            
+            
+            function repulsive_info() {
+                var repulsive_term = document.getElementById('repulsive_term');
+                var repulsive_def = document.getElementById('repulsive_def');
+                var repulsive = document.getElementById('repulsive');
+                
+                repulsive.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                repulsive_term.style.opacity = "100%";
+                repulsive_def.style.opacity = "100%";
+            }
+            
+            function repulsive_end() {
+                repulsive_def.style.opacity = "0%";
+                repulsive_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                repulsive.style.filter = "blur(2.5px)";
+                
+            }
+            
+            
+            function fixable_info() {
+                var fixable_term = document.getElementById('fixable_term');
+                var fixable_def = document.getElementById('fixable_def');
+                var fixable = document.getElementById('fixable');
+                
+                fixable.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                fixable_term.style.opacity = "100%";
+                fixable_def.style.opacity = "100%";
+            }
+            
+            function fixable_end() {
+                fixable_def.style.opacity = "0%";
+                fixable_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                fixable.style.filter = "blur(2.5px)";
+            }
+            
+            
+            function traumatized_info() {
+                var traumatized_term = document.getElementById('traumatized_term');
+                var traumatized_def = document.getElementById('traumatized_def');
+                var traumatized = document.getElementById('traumatized');
+                
+                traumatized.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                traumatized_term.style.opacity = "100%";
+                traumatized_def.style.opacity = "100%";
+            }
+            
+            function traumatized_end() {
+                traumatized_def.style.opacity = "0%";
+                traumatized_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                traumatized.style.filter = "blur(2.5px)";
+                
+            }
+            
+            
+            function prude_info() {
+                var prude_term = document.getElementById('prude_term');
+                var prude_def = document.getElementById('prude_def');
+                var prude = document.getElementById('prude');
+                
+                prude.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                prude_term.style.opacity = "100%";
+                prude_def.style.opacity = "100%";
+            }
+            
+            function prude_end() {
+                prude_def.style.opacity = "0%";
+                prude_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                prude.style.filter = "blur(2.5px)";
+                
+            }
+            
+            
+            function immature_info() {
+                var immature_term = document.getElementById('immature_term');
+                var immature_def = document.getElementById('immature_def');
+                var immature = document.getElementById('immature');
+                
+                immature.style.filter = "blur(0)";
+                exp.style.opacity = "0%";
+                immature_term.style.opacity = "100%";
+                immature_def.style.opacity = "100%";
+            }
+            
+            function immature_end() {
+                immature_def.style.opacity = "0%";
+                immature_term.style.opacity = "0%";
+                exp.style.opacity = "100%";
+                immature.style.filter = "blur(2.5px)";
+                
+            }
+            
+            
             
         </script>
         
